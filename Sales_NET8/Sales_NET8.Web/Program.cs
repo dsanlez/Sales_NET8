@@ -12,6 +12,8 @@ namespace Sales_NET8.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
             builder.Services.AddDbContext<DataContext>(x =>
             {
                 x.UseSqlServer("name=LocalConnection");
